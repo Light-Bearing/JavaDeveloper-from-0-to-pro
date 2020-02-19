@@ -17,13 +17,13 @@ public class RoadCamera {
         //Скорость автомобиля
         Integer oncomingSpeed = Integer.parseInt((new BufferedReader(new InputStreamReader(System.in))).readLine());
         if (oncomingSpeed >= criminalSpeed) {
-            System.out.println("Текущая скорость: " + oncomingSpeed + " км/ч, вы ехали в интервале " +
-                    criminalSpeed + " и выше - Вызов полиции...");
+            System.out.println("Текущая скорость: " + oncomingSpeed + " км/ч, вы ехали выше скорости " +
+                    criminalSpeed + " км/ч - Вызов полиции...");
         } else if (oncomingSpeed > maxOncomingSpeed) {
             Integer overSpeed = oncomingSpeed - maxOncomingSpeed;
             Integer gradesCount = overSpeed / speedFineGrade + 1;
             Integer fine = finePerGrade * gradesCount;
-            System.out.println(oncomingSpeed + " км/ч - Щтраф " + fine + " руб.");
+            System.out.println("Текущая скорость: " + oncomingSpeed + " км/ч - Щтраф " + fine + " руб.");
         } else {
             System.out.println("Скорость не превышена");
         }
